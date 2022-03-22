@@ -3,7 +3,7 @@
 import java.sql.*;
 import java.util.Scanner;
 
-class JDBC_CRUD_Project
+class CRUD
 {
 	public static void main(String[] args) 
 	{
@@ -28,7 +28,8 @@ class JDBC_CRUD_Project
 			if (con.isClosed()) {
 				System.out.println("Connection Closed");
 			}else{
-				System.out.println("Connection Connected...");			}
+				System.out.println("Connection Connected...");			
+			}
 
 
 		}catch(Exception e){

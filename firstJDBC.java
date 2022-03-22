@@ -13,7 +13,7 @@ class firstJDBC
 			//Create Connection:
 
 			//Create connection variables:
-			String url = "jdbc:mysql://127.0.0.1:3306/student?useSSL=false";
+			String url = "jdbc:mysql://127.0.0.1:3306/student?useSSL";
 			String username = "root";
 			String password = "root";
 
