@@ -3,7 +3,7 @@
 import java.sql.*;
 import java.io.*;
 
-class dynamicInsertJDBC 
+class selectJDBC
 {
 	public static void main(String[] args) 
 	{
@@ -34,9 +34,9 @@ class dynamicInsertJDBC
 
 				String query = "select * from students";
 
-				Statement stmt = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY);
+				Statement stmt = con.createStatement();
 
-				Resultset set = stmt.executeQuery(query);
+				ResultSet set = stmt.executeQuery(query);
 
 				while(set.next())
 				{
