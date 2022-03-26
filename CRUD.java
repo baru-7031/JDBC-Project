@@ -10,26 +10,34 @@ class CRUD
 	{
 		int userChoice = 0;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Scanner sc = new Scanner(System.in);
 		try{	
+			System.out.println("This is Full JDBC CRUD Operation : \n");
+			System.out.println("This Project Only for java mySQL Driver ^8 : \n");
+
+			System.out.print("Enter mySQL PORT Number(Default PORT NO ->3306) : ");
+			int userPORT = sc.nextInt();
+			System.out.print("Enter Table Name : ");
+			String userDBName = br.readLine();
 
 			// Load Driver
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
 			// Enter username and passqord to Connection with mySQL
-			String url = "jdbc:mysql://127.0.0.1:3306/student?useSSL=false";
+			String url = "jdbc:mysql://127.0.0.1:" + userPORT + "/" + userDBName + "?useSSL=false";
 
 			System.out.print("Enter Database Username : ");
-			Scanner sc = new Scanner(System.in);
-			String username = sc.nextLine();
+			
+			String username = br.readLine();
 
 			System.out.print("Enter Database password : ");
-			String password = sc.nextLine();
+			String password = br.readLine();
 
 			Connection con = DriverManager.getConnection(url,username,password);
 
 			if (con.isClosed()) {
 				System.out.println("Connection Closed");
-			}else{
+			}else{                                                        
 				System.out.println("mySQL Connection Connected...");
 				System.out.println();
 				while(true){
